@@ -1,0 +1,115 @@
+
+<div class="center">
+  <form name="userSurvey" novalidate ng-submit="submitSurvey()" class="pure-form pure-form-aligned">
+    <fieldset>
+      <legend>Answer these things please</legend>
+      <div class="pure-control-group">
+        <label>Name</label>
+        <input type="text" 
+          placeholder="Name"
+          name="name" 
+          ng-model="survey.name"
+          ng-minlength=3
+          ng-maxlength=20 required/>
+      </div>
+      <div class="pure-control-group">
+        <label>Email</label>
+        <input type="email" 
+          placeholder="you@example.com"
+          name="age" 
+          ng-model="survey.email"
+          ng-minlength=8
+          ng-maxlength=30 required/>
+      </div>
+      <div class="pure-control-group">
+        <label>Age</label>
+        <input type="number" 
+          placeholder="45"
+          name="age" 
+          ng-model="survey.age"
+          ng-minlength=2
+          ng-maxlength=3 required/>
+      </div>
+      <div class="ratings">
+        <div>Please rate the following accordingly:</div>
+        </br>
+        <div>
+          <span>1 - Hate it</span><span>2 - Meh</span><span>3 - It's fine</span>
+          <span>4 - Like it</span><span>5 - Love it</span>
+        </div>  
+      </div>
+      <div class="pure-control-group">
+        <label class="pure-radio">This</label>
+        <input type="radio" 
+          value="1"
+          class="radio"
+          ng-model="survey.q1"
+          required/>1
+        <input type="radio" 
+          value="2"
+          class="radio"
+          ng-model="survey.q1"/>2
+        <input type="radio" 
+          value="3"
+          class="radio"
+          ng-model="survey.q1"/>3
+        <input type="radio" 
+          value="4"
+          class="radio"
+          ng-model="survey.q1"/>4
+        <input type="radio" 
+          value="5"
+          class="radio"
+          ng-model="survey.q1"/>5      
+      </div>
+      <div class="pure-control-group">
+        <label class="pure-radio">That</label>
+        <input type="radio" 
+          value="1"
+          class="radio"
+          ng-model="survey.q2"
+          required/>1
+        <input type="radio" 
+          value="2"
+          class="radio"
+          ng-model="survey.q2"/>2
+        <input type="radio" 
+          value="3"
+          class="radio"
+          ng-model="survey.q2"/>3
+        <input type="radio" 
+          value="4"
+          class="radio"
+          ng-model="survey.q2"/>4
+        <input type="radio" 
+          value="5"
+          class="radio"
+          ng-model="survey.q2"/>5      
+      </div>
+      <div class="pure-control-group">
+        <label class="pure-radio">The Other</label>
+        <input type="radio" 
+          value="1"
+          class="radio"
+          ng-model="survey.q3"/>1
+        <input type="radio" 
+          value="2"
+          class="radio"
+          ng-model="survey.q3"/>2
+        <input type="radio" 
+          value="3"
+          class="radio"
+          ng-model="survey.q3"/>3
+        <input type="radio" 
+          value="4"
+          class="radio"
+          ng-model="survey.q3"/>4
+        <input type="radio" 
+          value="5"
+          class="radio"
+          ng-model="survey.q3"
+          required/>5  
+      </div>
+      <button type="submit" class="pure-button button-custom button-submit" ng-disabled="userSurvey.$invalid">Submit Survey</button>
+    </fieldset>
+</div>  

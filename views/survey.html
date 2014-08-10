@@ -2,7 +2,7 @@
 <div class="center">
   <form name="userSurvey" novalidate ng-submit="submitSurvey()" class="pure-form pure-form-aligned">
     <fieldset>
-      <legend>Answer these things please</legend>
+      <legend>Please complete the following</legend>
       <div class="pure-control-group">
         <label>Name</label>
         <input type="text" 
@@ -27,7 +27,7 @@
           placeholder="45"
           name="age" 
           ng-model="survey.age"
-          ng-minlength=2
+          ng-minlength=1
           ng-maxlength=3 required/>
       </div>
       <div class="ratings">
